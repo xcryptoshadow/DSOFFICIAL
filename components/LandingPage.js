@@ -148,18 +148,6 @@ const LandingPage = ({ Web3Handler, account }) => {
                 )}
               </div>
             </div>
-            <div>
-              <div className="w-full min-w-[330px] max-w-[350px] h-[100px]">
-                <script
-                  async=""
-                  type="text/javascript"
-                  src="//cdn.carbonads.com/carbon.js?serve=CEAI423U&amp;placement=daisyuicom"
-                  id="_carbonads_js"
-                  // style="display: none !important;"
-                  style={{ display: "none !important" }}
-                ></script>
-              </div>
-            </div>
           </div>
           <svg
             className="fill-secondary col-start-1 row-start-1 h-auto w-full"
