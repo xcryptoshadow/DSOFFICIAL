@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import Footer from "../components/Footer";
-
+import Navbar from "./Navbar";
 const LandingPage = ({ Web3Handler, account }) => {
   return (
     <div>
+      <Navbar />
       <div data-theme="halloween">
         <div className=" from-primary to-secondary text-primary-content -mt-[4rem] grid place-items-center items-end bg-gradient-to-br pt-20">
           <div className="hero-content col-start-1 row-start-1 w-full max-w-7xl flex-col justify-between gap-10 pb-40 lg:flex-row lg:items-end lg:gap-0 xl:gap-20">
             <div className="lg:pl-10 lg:pb-32">
               <div className="mb-2 py-4 text-center lg:py-10 lg:text-left">
                 <h1 className="font-title mb-2 text-4xl font-extrabold sm:text-5xl lg:text-7xl">
-                  DeStemr
+                  DeStemr🌿
                 </h1>
                 <h2 className="font-title text-lg font-extrabold sm:text-2xl lg:text-3xl">
                   The music industries new revolutionizing
@@ -128,23 +128,16 @@ const LandingPage = ({ Web3Handler, account }) => {
                 </div>
               </div>
               <div className="mt-4 flex flex-1 justify-center space-x-2 lg:mt-6 lg:justify-start">
-                <div
-                  onClick={Web3Handler}
-                  className="btn btn-ghost btn-active lg:btn-lg normal-case"
-                >
-                  <span className="hidden sm:inline">
-                    Start by connecting your wallet
-                  </span>{" "}
-                  <span className="inline sm:hidden">
-                    Start by connecting your wallet
-                  </span>
-                </div>{" "}
                 {account ? (
-                  <a href="/docs/install" className="btn lg:btn-lg normal-case">
+                  <a href="/marketplace" className="btn lg:btn-lg normal-case">
                     Marketplace
                   </a>
                 ) : (
-                  <div></div>
+                  <div>
+                    <button className=" btn btn-disabled">
+                      Connect Wallet to Access Marketplace
+                    </button>
+                  </div>
                 )}
               </div>
             </div>

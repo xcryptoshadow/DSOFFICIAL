@@ -53,7 +53,6 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <div>
-      <Navbar Web3Handler={Web3Handler} account={account} />
       <Component {...pageProps} />
       <Toaster />
     </div>

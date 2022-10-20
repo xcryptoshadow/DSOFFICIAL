@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bottom-0 w-full">
+    <div className="bottom-0 w-full bg-black">
       <footer className="footer items-center p-4 bottom-0 border-black border-t">
-        <div className="items-center grid-flow-col">
+        <div className="items-center grid-flow-col text-white">
           🛠
           <p>built by Chris Abdo</p>
         </div>

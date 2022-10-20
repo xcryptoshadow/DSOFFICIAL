@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Web3 from "web3";
 import toast from "react-hot-toast";
 
-const Navbar = () => {
+const MarketNavbar = () => {
   const [account, setAccount] = useState("");
   const [web3, setWeb3] = useState(null);
   useEffect(() => {
@@ -57,7 +57,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div id="navbar" className="navbar sticky top-0 z-50 text-black">
+    <div id="navbar" className="navbar sticky top-0 z-50 text-black bg-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -110,37 +110,23 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl ">DeStemr</a>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex={0}>
-            <a>
-              Parent
-              <svg
-                className="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
+            <a href="/marketplace" className="btn btn-ghost">
+              Marketplace
             </a>
-            <ul className="p-2">
-              <li>
-                <a>Submenu 1</a>
-              </li>
-              <li>
-                <a>Submenu 2</a>
-              </li>
-            </ul>
           </li>
           <li>
-            <a>Item 3</a>
+            <a href="/my-listed-nfts" className="btn btn-ghost">
+              My Listed Stems
+            </a>
+          </li>
+          <li>
+            <a href="my-nfts" className="btn btn-ghost">
+              My Owned Stems
+            </a>
           </li>
         </ul>
       </div>
@@ -159,4 +145,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MarketNavbar;
